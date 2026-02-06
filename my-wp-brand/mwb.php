@@ -11,7 +11,7 @@
  * Plugin Name: My Wp Brand
  * Plugin URI:  https://imw3.com/product/my-wp-brand
  * Description: My Brand plugin is used to customize admin panel.
- * Version:     1.1.3
+ * Version:     1.1.4
  * Author:      imw3
  * Author URI:  https://imw3.com/
  * Text Domain: my-wp-brand
@@ -548,6 +548,7 @@ if ( ! class_exists( 'MWB_Brand' ) ) :
          * 
          * @since 1.0.0
          * @since 1.1.3 Added user capability verification and nonce verification.
+         * @since 1.1.4 fix CSRF
          */
         public function mwb_plugins_form(){
 
@@ -555,7 +556,9 @@ if ( ! class_exists( 'MWB_Brand' ) ) :
                 exit;
             }
 
-            if ( isset( $_POST['nonce'] ) && ! wp_verify_nonce( $_POST['nonce'] , 'ajax-nonce' ) ) {
+            $nonce = isset( $_POST['nonce'] ) ? sanitize_text_field( wp_unslash( $_POST['nonce'] ) ) : '';
+
+            if ( ! wp_verify_nonce( $nonce , 'ajax-nonce' ) ) {
                 die('The token has expired!');
             }
 
@@ -577,6 +580,7 @@ if ( ! class_exists( 'MWB_Brand' ) ) :
          * 
          * @since 1.0.0
          * @since 1.1.3 Added user capability verification and nonce verification.
+         * @since 1.1.4 fix CSRF
          */
         public function mwb_style_ajax() {
 
@@ -584,7 +588,9 @@ if ( ! class_exists( 'MWB_Brand' ) ) :
                 exit;
             }
 
-            if ( isset( $_POST['nonce'] ) && ! wp_verify_nonce( $_POST['nonce'] , 'ajax-nonce' ) ) {
+            $nonce = isset( $_POST['nonce'] ) ? sanitize_text_field( wp_unslash( $_POST['nonce'] ) ) : '';
+
+            if ( ! wp_verify_nonce( $nonce , 'ajax-nonce' ) ) {
                 die('The token has expired!');
             }
 
@@ -618,6 +624,7 @@ if ( ! class_exists( 'MWB_Brand' ) ) :
          * 
          * @since 1.0.0
          * @since 1.1.3 Added user capability verification and nonce verification.
+         * @since 1.1.4 fix CSRF
          */
         public function mwb_author_form() {
 
@@ -625,7 +632,9 @@ if ( ! class_exists( 'MWB_Brand' ) ) :
                 exit;
             }
 
-            if ( isset( $_POST['nonce'] ) && ! wp_verify_nonce( $_POST['nonce'] , 'ajax-nonce' ) ) {
+            $nonce = isset( $_POST['nonce'] ) ? sanitize_text_field( wp_unslash( $_POST['nonce'] ) ) : '';
+
+            if ( ! wp_verify_nonce( $nonce , 'ajax-nonce' ) ) {
                 die('The token has expired!');
             }
 

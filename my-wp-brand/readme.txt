@@ -1,10 +1,10 @@
 === My Wp Brand – Hide menu & Hide Plugin ===
 Contributors: imw3, mohammadazad, riyazuddin
 Tags: hide menu, hide plugin, hide version, admin menu, change logo,
-Requires at least: 6.5
-Tested up to: 6.6.2
+Requires at least: 6.7
+Tested up to: 6.8
 Requires PHP: 7.4
-Stable tag: 1.1.3
+Stable tag: 1.1.4
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -53,9 +53,9 @@ Update necessary setting to show any menu again by this URL.
 
 == Installation ==
 
-1. Install via the built-in WordPress plugin installer. Or download and unzip my-wp-brand.zip inside the pluginâ€™s directory for your site (typically wp-content/plugins/)
-2. Activate the plugin through the â€˜Pluginsâ€™ admin menu in WordPress.
-3. Go to â€œSettingâ€ -> â€œWp Brandâ€ and check or tick mark those plugin / menus that you want to hide from admin. (You can also use the â€œSettingsâ€ link in the pluginâ€™s entry on the admin â€œPluginsâ€ page).
+1. Install via the built-in WordPress plugin installer. Or download and unzip my-wp-brand.zip inside the plugin’s directory for your site (typically wp-content/plugins/)
+2. Activate the plugin through the Plugins admin menu in WordPress.
+3. Go to "Settings" -> "MY WP Brand" and check or tick mark those plugin / menus that you want to hide from admin. (You can also use the "Settings" link in the plugin’s entry on the admin "plugins" page).
 
 == Changelog ==
 
@@ -77,3 +77,6 @@ Update necessary setting to show any menu again by this URL.
 = 1.1.3 =
 * Fixed broken access control vulnerability.
 * Compatible with WordPress 6.6.2
+
+= 1.1.4 =
+* Fixed Cross Site Request Forgery (CSRF).
