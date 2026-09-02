@@ -11,7 +11,7 @@
  * Plugin Name: My Wp Brand
  * Plugin URI:  https://imw3.com/product/my-wp-brand
  * Description: My Brand plugin is used to customize admin panel.
- * Version:     1.1.4
+ * Version:     1.1.5
  * Author:      imw3
  * Author URI:  https://imw3.com/
  * Text Domain: my-wp-brand

@@ -1,10 +1,10 @@
 === My Wp Brand – Hide menu & Hide Plugin ===
 Contributors: imw3, mohammadazad, riyazuddin
 Tags: hide menu, hide plugin, hide version, admin menu, change logo,
-Requires at least: 6.7
-Tested up to: 6.8
+Requires at least: 7.0
+Tested up to: 7.1
 Requires PHP: 7.4
-Stable tag: 1.1.4
+Stable tag: 1.1.5
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -80,3 +80,6 @@ Update necessary setting to show any menu again by this URL.
 
 = 1.1.4 =
 * Fixed Cross Site Request Forgery (CSRF).
+
+= 1.1.5 =
+* Compatible with WordPress 7.1
